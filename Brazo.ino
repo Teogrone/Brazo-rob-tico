@@ -28,5 +28,5 @@ garra.attach (pingarra);
 
 void loop() {
   base.write (initBase +2);
-  base.write (initBase -2);
+  base.write (initBase -5);
 }
