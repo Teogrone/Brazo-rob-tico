@@ -1,13 +1,17 @@
 #include <Servo.h>
+#define initBase 90
 #define pinbase 11
 
 #include <Servo.h>
+#define initBase 90
 #define pinladoi 8
 
 #include <Servo.h>
+#define initBase 90
 #define pinladod 10
 
 #include <Servo.h>
+#define initBase 90
 #define pingarra 9
 
 Servo base;
@@ -23,6 +27,6 @@ garra.attach (pingarra);
 }
 
 void loop() {
-  base.write (2);
-  base.write (-2);
+  base.write (initBase +2);
+  base.write (initBase -2);
 }
