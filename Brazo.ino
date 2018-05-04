@@ -1,3 +1,5 @@
+char val;
+
 #include <Servo.h>
 #define initBase 90
 #define pinbase 11
@@ -27,6 +29,9 @@ garra.attach (pingarra);
 }
 
 void loop() {
-  base.write (initBase +2);
-  base.write (initBase -5);
+  switch(val){
+  case 1:
+  base.write(initBase +2);
+  break; 
+  }
 }
