@@ -1,25 +1,16 @@
-char val;
-
 #include <Servo.h>
-#define initBase 90
 #define pinbase 11
-
-#include <Servo.h>
-#define initBase 90
 #define pinladoi 8
-
-#include <Servo.h>
-#define initBase 90
 #define pinladod 10
-
-#include <Servo.h>
-#define initBase 90
 #define pingarra 9
+#define initBase 90
 
 Servo base;
 Servo ladoi;
 Servo ladod;
 Servo garra;
+
+int val;
 
 void setup() {
 base.attach (pinbase);
@@ -29,9 +20,16 @@ garra.attach (pingarra);
 }
 
 void loop() {
-  switch(val){
-  case 1:
-  base.write(initBase +2);
-  break; 
+  base.write (val=initBase +50);
+  delay (2000);
+  ladod.write (val=initBase +50);
+  delay (2000);
+  ladoi.write (val=initBase +50);
+  delay (2000);
+  base.write (val=initBase -50); 
+  delay (2000);
+  ladoi.write (val=initBase -50);
+  delay (2000);
+  ladod.write (val=initBase -50);
+  delay (2000);
   }
-}
